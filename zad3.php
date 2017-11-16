@@ -34,3 +34,23 @@ function solution($A) {
     }
 
 }
+
+// bez array_ funkcija i jednim prolazom kroz input polje - O(N^2)
+
+function solution($A) {
+
+  $seen = [];
+
+  for($i = 0; $i < count($A); $i++) {
+    $seen_num = false;
+    foreach ($seen as $value) {
+      if ($value == $A[$i]) {
+        $seen_num = true;
+    }
+  }
+  if (!$seen_num) {
+    $seen[] = $A[$i];
+  }
+}
+  return count($seen);
+}
