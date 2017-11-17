@@ -31,3 +31,18 @@ function solution($A) {
     return $pair_counter;
   }
 }
+
+// sa restrikcijama bez array_ funkcija i jednim prolazom po input polju
+
+function solution($A){
+  for ($i=0; $i < count($A); $i++) {
+    
+  }
+
+  if ($pair_counter > 1000000000) {
+    return -1;
+  }else {
+    return $pair_counter;
+  }
+
+}

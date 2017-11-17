@@ -22,3 +22,11 @@ function solution($A) {
   }
   return -1; // input aray has no unpaired element
 }
+
+// sa restrikcijama bez array_ funkcija i jednim prolazom po input polju
+
+function solution($A){
+  for ($i=0; $i < count($A); $i++) {
+    
+  }
+}
