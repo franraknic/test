@@ -24,9 +24,21 @@ function solution($A) {
 }
 
 // sa restrikcijama bez array_ funkcija i jednim prolazom po input polju
+// O(N) ili O(N log(N))
 
 function solution($A){
-  for ($i=0; $i < count($A); $i++) {
-    
-  }
+
+      $brojevi = [];
+
+      foreach ($A as $value) {
+
+          if (isset($brojevi[$value]) == false) {
+              $brojevi[$value] = 1;
+          } else {
+              unset($brojevi[$value]);
+          }
+      }
+
+      $bez_para = key($brojevi);
+      return $bez_para;
 }
