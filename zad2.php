@@ -33,10 +33,20 @@ function solution($A) {
 }
 
 // sa restrikcijama bez array_ funkcija i jednim prolazom po input polju
+// O(N) kompleksnost algorima
 
 function solution($A){
+
+  $j = 0;
+  $pair_counter = 0;
+
   for ($i=0; $i < count($A); $i++) {
-    
+
+    if ($A[$i] == 0) {
+      $j++;
+    }elseif ($A[$i] == 1) {
+      $pair_counter += $j;
+    }
   }
 
   if ($pair_counter > 1000000000) {
@@ -44,5 +54,4 @@ function solution($A){
   }else {
     return $pair_counter;
   }
-
 }
